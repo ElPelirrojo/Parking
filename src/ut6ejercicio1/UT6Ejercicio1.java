@@ -18,6 +18,7 @@ public class UT6Ejercicio1 {
         Parking artesano = new Parking(5);
         artesano.inicializarPlazas();
         artesano.visualizar();
+        //holaa
     }
     
 }
