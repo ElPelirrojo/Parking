@@ -34,6 +34,35 @@ public class Parking {
             System.out.println(nplazas + " " + plazas[nplazas]);;
         }
     }
+    /**
+     * busqueda secuencial. ecuentra el primer valor igual a libre
+     * @return posicion donde se encuentra el primer valor igual a libre, -1 en caso contrario
+     */
+    public int busquedaSecuencial(){
+        int nplazas = 0;
+        boolean encontrado = false;
+        while(nplazas < plazas.length && !encontrado){ //encontrado == false
+            if(plazas[nplazas].equals("LIBRE")){
+		encontrado = true;
+            }else{
+		nplazas++;
+            }
+        }
+        if(!encontrado){
+            nplazas = -1;
+        }
+        return nplazas;
+    }
     
-    
+    public void entrada(){
+        int nplaza;
+        nplaza = busquedaSecuencial();
+	if(nplaza == -1){
+            System.out.println("PARKING COMPLETO");
+	}else{
+            plazas[nplaza] = "OCUPADO";
+            System.out.println("LA PLAZA ASIGNADA: " + nplaza);
+	}
+
+}
 }
