@@ -9,6 +9,7 @@ package ut6ejercicio1;
  *
  * @author dam
  */
+import numero.Numero;
 public class Parking {
     
     String[]plazas;
@@ -63,6 +64,17 @@ public class Parking {
             plazas[nplaza] = "OCUPADO";
             System.out.println("LA PLAZA ASIGNADA: " + nplaza);
 	}
-
-}
+    }
+    
+    public void salida(){
+        Numero n = new Numero();
+        int nplaza;
+        nplaza = n.pedirNumero("introduzca la plaza a dejar libre", 0, 4);
+        if(plazas[nplaza].equals("OCUPADO")){
+            System.out.println("PLAZA LIBRE");
+            plazas[nplaza] = "LIBRE";
+        }else{
+            System.out.println("LA PLAZA YA ESTA LIBRE");
+        }
+    }
 }
