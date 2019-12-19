@@ -28,6 +28,7 @@ public class UT6Ejercicio1 {
                     artesano.entrada();
                     break;
                 case 2:
+                    artesano.salida();
                     break;
                 case 3:
                     artesano.visualizar();
