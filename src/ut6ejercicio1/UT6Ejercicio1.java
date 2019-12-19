@@ -9,6 +9,7 @@ package ut6ejercicio1;
  *
  * @author dam
  */
+import numero.Numero;
 public class UT6Ejercicio1 {
 
     /**
@@ -16,9 +17,31 @@ public class UT6Ejercicio1 {
      */
     public static void main(String[] args) {
         Parking artesano = new Parking(5);
+        int opcion;
+        Numero n = new Numero();
         artesano.inicializarPlazas();
-        artesano.visualizar();
-        //holaa
+        menu(); //desde un metodo estatico solo puedo llamar a otro metodo estatico
+        opcion = n.pedirNumero("", 1, 4);
+        while(opcion != 4){
+            switch(opcion){
+                case 1: 
+                    artesano.entrada();
+                    break;
+                case 2:
+                    break;
+                case 3:
+                    artesano.visualizar();
+            }
+            menu();
+            opcion = n.pedirNumero("", 1, 4); 
+        }
     }
     
+    public static void menu(){ //un metodo estatico es comun para todos los objetos de esa clase
+        System.out.println("\n\n1. ENTRADA");
+        System.out.println("2. SALIDA");
+        System.out.println("3. ESTADO DEL PARKING");
+        System.out.println("4. FIN");
+        System.out.println("OPCION :");
+    }
 }
