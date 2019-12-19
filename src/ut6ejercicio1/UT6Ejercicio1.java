@@ -35,7 +35,7 @@ public class UT6Ejercicio1 {
             menu();
             opcion = n.pedirNumero("", 1, 4); 
         }
-    }//d
+    }
     
     public static void menu(){ //un metodo estatico es comun para todos los objetos de esa clase
         System.out.println("\n\n1. ENTRADA");
